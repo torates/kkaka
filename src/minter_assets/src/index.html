@@ -10,13 +10,20 @@
   </head>
   <body>
     <main>
-      <img src="logo.png" alt="DFINITY logo" />
+      <button id="connect" type="submit">Connect to plug</button>
+      <img id="nft" src="logo.png" alt="DFINITY logo" />
       <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
+        <label for="name">Enter a tokenURI: &nbsp;</label>
         <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
+        <button id="generate" type="submit">Click Me!</button>
+      </form>
+      <form action="#">
+        <label for="add">Enter a principal: &nbsp;</label>
+        <input id="add" alt="Name" type="text" />
+        <button id="add" type="submit">Click Me!</button>
       </form>
       <section id="greeting"></section>
+      <section id="balance"></section>
     </main>
   </body>
 </html>
