@@ -9,11 +9,10 @@
         "minter"
       ],
       "frontend": {
-        "entrypoint": "src/minter_assets/src/index.html"
+        "entrypoint": "dist/index.html"
       },
       "source": [
-        "src/minter_assets/assets",
-        "dist/minter_assets/"
+        "dist/"
       ],
       "type": "assets"
     }

@@ -7,8 +7,13 @@ import Principal "mo:base/Principal";
 import Array "mo:base/Array";
 import Iter "mo:base/Iter";
 import T "dip721_types";
+import Seeder "seeder";
+
+/* import Seeder "seeder"; */
 
 actor class DRC721(_name : Text, _symbol : Text) {
+
+    type SeedResponse = T.SeedResponse;
 
     //Using DIP721 standard, adapted from https://github.com/SuddenlyHazel/DIP721/blob/main/src/DIP721/DIP721.mo
     private stable var tokenPk : Nat = 0;
@@ -18,6 +23,9 @@ actor class DRC721(_name : Text, _symbol : Text) {
     private stable var balancesEntries : [(Principal, Nat)] = [];
     private stable var tokenApprovalsEntries : [(T.TokenId, Principal)] = [];
     private stable var operatorApprovalsEntries : [(Principal, [Principal])] = [];  
+
+    private stable var availableTokens : [([Nat], Bool)] = [];
+
 
     private let tokenURIs : HashMap.HashMap<T.TokenId, Text> = HashMap.fromIter<T.TokenId, Text>(tokenURIEntries.vals(), 10, Nat.equal, Hash.hash);
     private let owners : HashMap.HashMap<T.TokenId, Principal> = HashMap.fromIter<T.TokenId, Principal>(ownersEntries.vals(), 10, Nat.equal, Hash.hash);
@@ -110,6 +118,11 @@ actor class DRC721(_name : Text, _symbol : Text) {
         tokenPk += 1;
         _mint(msg.caller, tokenPk, uri);
         return tokenPk;
+    };
+
+
+    public shared(msg) func getRand() : async Principal {
+        return msg.caller;
     };
 
 
