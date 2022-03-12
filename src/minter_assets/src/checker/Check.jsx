@@ -70,6 +70,8 @@ export function Check() {
 
         const lastOwner = await Actor.ownerOf(last);
 
+        const natlastOwner = lastOwner / 100000000;
+
         const totalSpent = await Actor.totalSpent(princ);
 
 
@@ -77,9 +79,9 @@ export function Check() {
         document.getElementById("idframe2").src = "https://7thjk-byaaa-aaaah-abdfa-cai.raw.ic0.app/?tokenid=" + last.toString();
         document.getElementById("nftAnch2").innerHTML = "Last NFT minted"
 
-        document.getElementById("heowns").innerHTML = "Owned by " + lastOwner;
+        document.getElementById("heowns").innerHTML = "Owned by " + natlastOwner;
 
-        document.getElementById("spent").innerHTML = "You have spent " + totalSpent.toString() + " :)";
+        document.getElementById("spent").innerHTML = "You have spent " + totalSpent.toString() + " ICP :)";
 
 
 
@@ -97,8 +99,11 @@ export function Check() {
         <button id="check" type="submit">Click here to show stats!</button>
       </div>
       <div className="result">
-        <a id="nftAnch2" target="_blank"></a>
+        
         <h2 id="heowns" style={styles.mintxt}></h2>
+
+        <a id="nftAnch2" target="_blank"></a>
+
         <h2 id="spent" style={styles.mintxt}></h2>
       </div>
       <iframe id="idframe2" style={styles.appframe} src="" title="NFT"></iframe>
