@@ -6,7 +6,6 @@
  * Stability  : Experimental
  */
 
- //as you can see this token is based on the DIP20 standard
 
 import HashMap "mo:base/HashMap";
 import Principal "mo:base/Principal";
@@ -24,7 +23,7 @@ import ExperimentalCycles "mo:base/ExperimentalCycles";
 import Cap "./cap/Cap";
 import Root "./cap/Root";
 
-//a simplified version of Dip20, made so i can add features to it in the future
+//a heavily modified version of Dip20, made so i can add features to it in the future
 
 shared(msg) actor class Token(
     _logo: Text,
