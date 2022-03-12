@@ -1,5 +1,5 @@
 # minter
-Test live at 7ugp6-maaaa-aaaah-abdfq-cai.raw
+Test live [here](7ugp6-maaaa-aaaah-abdfq-cai.raw) 
 
 Thank you for the Motoko bootcamp!
 
