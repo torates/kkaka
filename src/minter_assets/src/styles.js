@@ -10,6 +10,20 @@ const app = {
     alignItems: "stretch",
     width: "100%"
   }
+
+  const appframe = {
+    borderRadius:"15px",
+    boxShadow:"0px 15px 35px rgba(0,0,0,.3)",
+    margin:"2em auto",
+    maxWidth:"600px",
+    width:"100%",
+    height: "640px",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "stretch",
+  }
+
   const column = {
     flexDirection: "column",
     justifyContent: "center",
@@ -76,6 +90,7 @@ const flowerStatus = {
 
   export const styles = {
       app: app,
+      appframe: appframe,
       img: img,
       mintxt: mintxt,
       main: main,

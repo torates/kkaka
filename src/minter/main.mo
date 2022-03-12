@@ -267,6 +267,7 @@ No time to write this from scratch so my slow model will have to suffice 😜*/
             };
             buyers := Array.append(buyers, [thisBuyer]);
             ignore await TokenCanister._transfer(canisterIdd, msg.caller, 500);
+            oldBalance := newBalance;
             return true;
         } else {
             return false; //failed

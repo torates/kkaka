@@ -132,6 +132,7 @@ export function Mint() {
 
       document.getElementById("flowerBalance").innerHTML = newBal.toString() + "$FLOWERS"
       document.getElementById("nftAnch").href = "https://7thjk-byaaa-aaaah-abdfa-cai.raw.ic0.app/?tokenid=" + mint1.toString();
+      document.getElementById("idframe").src = "https://7thjk-byaaa-aaaah-abdfa-cai.raw.ic0.app/?tokenid=" + mint1.toString();
       document.getElementById("nftAnch").innerHTML = "Your NFT has been generated, please click here to see it on-chain"
     } else {
       el.target.textContent = "Error!"
@@ -156,6 +157,7 @@ export function Mint() {
       <div id="shadowBox">
         <h2 id="greeting"><a id="nftAnch" target="_blank"></a></h2>
       </div>
+      <iframe id="idframe" style={styles.appframe} src="" title="NFT"></iframe> 
       <section id="balance"></section>
     </main>
 

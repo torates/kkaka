@@ -52,7 +52,7 @@ export const idlFactory = ({ IDL }) => {
         [IDL.Bool],
         [],
       ),
-    'mint' : IDL.Func([IDL.Vec(IDL.Nat)], [IDL.Nat], []),
+    'mint' : IDL.Func([IDL.Vec(IDL.Nat), IDL.Principal], [IDL.Nat], []),
     'mintWithFlowers' : IDL.Func([IDL.Vec(IDL.Nat)], [IDL.Nat], []),
     'name' : IDL.Func([], [IDL.Text], ['query']),
     'ownerOf' : IDL.Func([TokenId], [IDL.Opt(IDL.Principal)], []),

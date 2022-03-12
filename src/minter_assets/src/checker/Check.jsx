@@ -74,6 +74,7 @@ export function Check() {
 
 
         document.getElementById("nftAnch2").href = "https://7thjk-byaaa-aaaah-abdfa-cai.raw.ic0.app/?tokenid=" + last.toString();
+        document.getElementById("idframe2").src = "https://7thjk-byaaa-aaaah-abdfa-cai.raw.ic0.app/?tokenid=" + last.toString();
         document.getElementById("nftAnch2").innerHTML = "Last NFT minted"
 
         document.getElementById("heowns").innerHTML = "Owned by " + lastOwner;
@@ -100,6 +101,7 @@ export function Check() {
         <h2 id="heowns" style={styles.mintxt}></h2>
         <h2 id="spent" style={styles.mintxt}></h2>
       </div>
+      <iframe id="idframe2" style={styles.appframe} src="" title="NFT"></iframe>
       <img id="show"></img>
       <section id="sayhi"></section>
     </main>
