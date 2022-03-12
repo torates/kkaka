@@ -13,7 +13,7 @@ export function Home() {
   return (
 
     <main style={styles.app}>
-        <img id="nft" src={pic} alt="NFT logo" style={styles.img}></img>
+        <a href="#" target="_blank"><img id="nft" src={pic} alt="NFT logo" style={styles.img}></img></a>
         <button id="gomint" type="submit"><a href="/mint">Click here to mint a random NFT!</a></button>
         <button id="gocheck" type="submit"><a href="/check">Click here to check NFT details</a></button>
         <div className="result">

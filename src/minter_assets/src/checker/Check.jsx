@@ -70,18 +70,18 @@ export function Check() {
 
         const lastOwner = await Actor.ownerOf(last);
 
-        const natlastOwner = lastOwner / 100000000;
-
         const totalSpent = await Actor.totalSpent(princ);
+        const nattotalSpent = Number(totalSpent) / 100000000;
 
-
+        document.getElementById("thereis").innerHTML = "Total minted:" + last.toString()
+        
         document.getElementById("nftAnch2").href = "https://7thjk-byaaa-aaaah-abdfa-cai.raw.ic0.app/?tokenid=" + last.toString();
         document.getElementById("idframe2").src = "https://7thjk-byaaa-aaaah-abdfa-cai.raw.ic0.app/?tokenid=" + last.toString();
         document.getElementById("nftAnch2").innerHTML = "Last NFT minted"
 
-        document.getElementById("heowns").innerHTML = "Owned by " + natlastOwner;
+        document.getElementById("heowns").innerHTML = "Owned by " + lastOwner;
 
-        document.getElementById("spent").innerHTML = "You have spent " + totalSpent.toString() + " ICP :)";
+        document.getElementById("spent").innerHTML = "You have spent " + nattotalSpent.toString() + " ICP :) minting in total";
 
 
 
@@ -99,10 +99,11 @@ export function Check() {
         <button id="check" type="submit">Click here to show stats!</button>
       </div>
       <div className="result">
+        <h2 id="thereis" style={styles.mintxt}></h2>
         
-        <h2 id="heowns" style={styles.mintxt}></h2>
 
         <a id="nftAnch2" target="_blank"></a>
+        <h2 id="heowns" style={styles.mintxt}></h2>
 
         <h2 id="spent" style={styles.mintxt}></h2>
       </div>
