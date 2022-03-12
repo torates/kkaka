@@ -30,7 +30,7 @@ You can deploy the $FLOWERS token canister with
 
 ```dfx deploy token --network ic --argument "(\"$logo\", \"Flowers\", \"FLOWERS\", 3, 99999, principal \"$(dfx identity get-principal)\")"``` 
 
-Then, you need to deplay the minter like this:
+Then, you need to deploy the minter like this:
 
 ```dfx deploy minter_assets --network ic --argument "(principal \"$(dfx identity get-principal)\", \"FlowersNFT\", \"NFLOWERT\")"```
 
