@@ -21,3 +21,30 @@ and
 
 My discord is iri#1598.
 Thank you a lot for the huge opportunity, love you guys!
+
+# Usage
+
+The first thing to do is deploying your fungible token.
+You can deploy the $FLOWERS token canister with 
+
+```dfx deploy token --network ic --argument "(\"$logo\", \"Flowers\", \"FLOWERS\", 3, 99999, principal \"$(dfx identity get-principal)\")"``` 
+
+Then, you need to deplay the minter like this:
+
+```dfx deploy minter_assets --network ic --argument "(principal \"$(dfx identity get-principal)\", \"FlowersNFT\", \"NFLOWERT\")"```
+
+After your canister is up and running, you have to initialize the verification balance chain with
+
+```dfx canister --network ic call minter setBalance```
+
+# Regarding verification
+
+The current system, as exposed before can be made to scale 'horizontally' so to say, if a generation of subaccounts is implemented and one is created for each particular payment to verify. This would let (theoretically) the system not break under such a low volume of TXs.
+
+Current system presents problems if as little as 3 people try to mint at very close intervals of time.
+
+# $FLOWERS
+
+As stated before, this token works under a modified DIP20 standard. It currently posesses no special functionality, but they could be freely implemented - making the NFT collection much more complete.
+
+For example, could make users who stake their flower (isInStakingPool) receive a set amount every epoch, or could make them have to pay in $FLOWERS to buy an accessory and add to [Nat] of properties. (Would love to have implemente the later option, but time was scarce)
