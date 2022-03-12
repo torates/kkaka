@@ -1,10 +1,15 @@
 const app = {
-    border: "2px solid red",
+    borderRadius:"15px",
+    boxShadow:"0px 15px 35px rgba(0,0,0,.3)",
+    margin:"2em auto",
+    maxWidth:"600px",
+    width:"100%",
     display: "flex",
-    flexDirection: "row",
-    justifyContent: "center"
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "stretch",
+    width: "100%"
   }
-
   const column = {
     flexDirection: "column",
     justifyContent: "center",
@@ -15,17 +20,20 @@ const main = {
     minHeight: "100%",
     maxHeight: "auto",
     width: "100%",
-    backgroundColor: "#272c34",
     marginTop: "1rem",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between"
   }
 
 const img = {
-  width: "320px",
-  height: "180px",
-  objectFit: "cover",
-  padding: "0.75rem",   
+  objectFit: "cover",  
   margin: "1em",
-  borderRadius: "15px"
+  borderRadius: "15px",
+  maxWidth: "50vw",
+  maxHeight: "25vw",
+  display: "block",
+  margin: "auto"
 }
 
 const mintxt = {
@@ -39,22 +47,42 @@ const foot = {
 }
 
 const navbar = {
-    width: "100%"
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+  width: "100%"
 }
 
 const about = {
     fontFamily: 'sans-serif',
     fontSize: '1.5rem',
     color: "antiquewhite",
-    width: "100%",
+    width: "100%"
+    
+}
+
+const flowerLogo = {
+  width: "40px",
+  height: "40px",
+  objectFit: "cover"
+}
+
+const flowerStatus = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  flexWrap: "nowrap"
 }
 
   export const styles = {
       app: app,
       img: img,
       mintxt: mintxt,
+      main: main,
       about: about,
       column: column,
       foot: foot,
-      navbar: navbar
+      navbar: navbar,
+      flowerLogo: flowerLogo,
+      flowerStatus: flowerStatus
   }

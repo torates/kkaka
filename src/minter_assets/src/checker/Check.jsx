@@ -31,34 +31,74 @@ export function Check() {
   
   let princOfCaller = "";
 
-  async function setTrol() {
-    document.getElementById("sayhi").innerText = "lol";
-    console.log("TESTING");
-
-    try {
-      const Actor = await window.ic.plug?.createActor({
-        canisterId: whitelist[0],
-        interfaceFactory: idlFactory,
+  async function setTrol(el) {
+        const isConnected = await window.ic.plug.isConnected();
+      
+        console.log('requesting connection..');
+      
+        if(!isConnected) {
+          const pubKey = await window.ic.plug.requestConnect({
+            whitelist: ["7thjk-byaaa-aaaah-abdfa-cai", "6xkgy-yyaaa-aaaah-abdda-cai"],
+            host: "https://7ugp6-maaaa-aaaah-abdfq-cai.raw.ic0.app",
       });
+          console.log("plug connected");
+        } else if (isConnected) {
+          console.log('Plug wallet is already connected');
+        } else {
+          console.log('Plug wallet connection was refused')
+        }
+      
+        await window.ic.plug.createAgent({whitelist, host});
+      
+        await window.ic.plug.agent.fetchRootKey();
+      
+        console.log('agent created');
+      
+      
+        const Actor = await window.ic.plug?.createActor({
+          canisterId: whitelist[0],
+          interfaceFactory: idlFactory,
+        });
 
-      console.log(components);
+        el.target.textContent = "Loading";
+      
+        console.log('actor created');
+      
+        const princ = await window.ic?.plug?.getPrincipal()
+
+        const last = await Actor.tokenPknow();
+
+        const lastOwner = await Actor.ownerOf(last);
+
+        const totalSpent = await Actor.totalSpent(princ);
 
 
-      document.getElementById("show").src = await Actor.tokenURI(4);
+        document.getElementById("nftAnch2").href = "https://7thjk-byaaa-aaaah-abdfa-cai.raw.ic0.app/?tokenid=" + last.toString();
+        document.getElementById("nftAnch2").innerHTML = "Last NFT minted"
 
-    } catch (e) {
-      console.log("wallet not connected lol")
-      console.log(e);
-    }
+        document.getElementById("heowns").innerHTML = "Owned by " + lastOwner;
+
+        document.getElementById("spent").innerHTML = "You have spent " + totalSpent.toString() + " :)";
+
+
+
+
+
+
+
+        el.target.textContent = "Success";
   }
   document.addEventListener("DOMContentLoaded", main);
 
   return (
-    <main>
-      <form action="#">
-        <button id="check" type="submit">Click here to show your NFTs!</button>
-      </form>
+    <main style={styles.app}>
+      <div id="checkDialog">
+        <button id="check" type="submit">Click here to show stats!</button>
+      </div>
       <div className="result">
+        <a id="nftAnch2" target="_blank"></a>
+        <h2 id="heowns" style={styles.mintxt}></h2>
+        <h2 id="spent" style={styles.mintxt}></h2>
       </div>
       <img id="show"></img>
       <section id="sayhi"></section>

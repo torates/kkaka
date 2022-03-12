@@ -6,15 +6,7 @@ body {
     flex-direction: row;
     justify-content: center;
 }
-
-img {
-    max-width: 50vw;
-    max-height: 25vw;
-    display: block;
-    margin: auto;
-}
-
-form {
+#mintDialog {
     display: flex;
     justify-content: center;
     gap: 0.5em;
@@ -24,20 +16,17 @@ form {
     align-items: baseline;
 }
 
+
+
+li { /* styles all li elements*/
+    list-style-type: none;
+}
+
 button[type="submit"] {
     padding: 5px 20px;
     margin: 10px auto;
     float: right;
-}
-
-#greeting {
-    margin: 10px auto;
-    padding: 10px 60px;
-    border: 1px solid #222;
-}
-
-#greeting:empty {
-    display: none;
+    cursor: pointer;
 }
 
 button[type="submit"] {
@@ -63,4 +52,3 @@ button[type="submit"] {
     transform: translate(0px,5px);
     border-bottom: 1px solid #2ecc71;
    }
-

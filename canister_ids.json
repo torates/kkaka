@@ -4,5 +4,8 @@
   },
   "minter_assets": {
     "ic": "7ugp6-maaaa-aaaah-abdfq-cai"
+  },
+  "token": {
+    "ic": "6xkgy-yyaaa-aaaah-abdda-cai"
   }
 }

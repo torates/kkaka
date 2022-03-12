@@ -1,5 +1,8 @@
 {
   "canisters": {
+    "token": {
+      "main": "src/flower/token.mo"
+    },
     "minter": {
       "main": "src/minter/main.mo",
       "type": "motoko"
