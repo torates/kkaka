@@ -53,4 +53,4 @@ For example, could make users who stake their flower (isInStakingPool) receive a
 
 # Why ICP?
 
-I decided to not use the bootcamp faucet, as I believe that working with ICP is a mandatory skill needed to actually fund projects on the IC, what this means is if the payment verification system is improved (via the method I proposed before), this site could be used as a template to hold a bigger NFT mint. It also adds a degree of complexity, especially since working with the ledger can be such a hassle sometimes.
+I decided to not use the bootcamp faucet, as I believe that working with ICP is a mandatory skill needed to actually fund projects on the IC, what this means is if the payment verification system is improved (via the method I proposed before), this site could be used as a template to make public sales with more volume. It also adds a degree of complexity, especially since working with the ledger can be such a hassle sometimes.
