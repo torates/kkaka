@@ -1,6 +1,6 @@
 # minter
 ![MINTER](https://7ugp6-maaaa-aaaah-abdfq-cai.raw.ic0.app/assets/icflowwersacc.2f37c91e.gif)
-## Test live version [here](7ugp6-maaaa-aaaah-abdfq-cai.raw) 
+## Test live version [here](https://7ugp6-maaaa-aaaah-abdfq-cai.raw.ic0.app/) 
 
 Thank you for the Motoko bootcamp!
 
