@@ -17,7 +17,7 @@ The integration with the IC Ledger and the Token were hard to implement, but by 
 I sadly softbricked my linux in the middle of the project, so there may be some issues cloning the repo/with the package json, so after running 
 ```npm install```
 You might need to run
-```npm install react-router-dom```
+```npm install react-router-dom@5.2.0```
 and 
 ```npm install vite```
 
