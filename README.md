@@ -2,7 +2,9 @@
 ![MINTER](https://7ugp6-maaaa-aaaah-abdfq-cai.raw.ic0.app/assets/icflowwersacc.2f37c91e.gif)
 ## Test live version [here](https://7ugp6-maaaa-aaaah-abdfq-cai.raw.ic0.app/) 
 
-Thank you for the Motoko bootcamp!
+
+
+Made in 6 days. Thank you for the Motoko bootcamp!
 
 DISCLAIMER: The code needs to be cleaned by a LOT, so please be prepared to read very badly written code.
 
